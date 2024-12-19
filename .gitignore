@@ -1,0 +1,29 @@
+# Build output directories
+bin/
+obj/
+
+# Visual Studio files
+*.sln.DotSettings
+*.suo
+*.user
+*.userprefs
+*.unityproj
+*.DotSettings
+.vs/
+.vscode/
+
+# NuGet Packages
+packages/
+*.nupkg
+
+# Test results
+TestResults/
+*.trx
+
+# Other
+*.log
+*.tmp
+
+# OS-generated files (adjust based on your OS)
+.DS_Store  # macOS
+Thumbs.db  # Windows
