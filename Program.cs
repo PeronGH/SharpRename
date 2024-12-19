@@ -56,6 +56,14 @@ rootCommand.SetHandler((pattern, replacement, dryRun, files) =>
         return new RenameItem(directory ?? ".", baseName, newName);
     });
 
+    // Check if the new names are unique
+    var newNames = renameItems.Select(item => item.NewPath);
+    if (newNames.Distinct().Count() != newNames.Count())
+    {
+        Console.WriteLine("Error: New file names are not unique");
+        Environment.Exit(1);
+    }
+
     foreach (var item in renameItems)
     {
         if (dryRun)
